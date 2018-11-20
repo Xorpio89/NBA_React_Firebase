@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {
+  firebase,
   firebaseDB,
   firebaseLooper,
   firebaseTeams
@@ -12,7 +13,8 @@ import ArticleBody from "./ArticleBody";
 export class NewsArticles extends Component {
   state = {
     article: [],
-    team: []
+    team: [],
+    imageURL: ""
   };
 
   componentWillMount() {
@@ -32,6 +34,7 @@ export class NewsArticles extends Component {
               article,
               team
             });
+            this.getImageURL(article.image);
           });
       });
 
@@ -46,8 +49,21 @@ export class NewsArticles extends Component {
     //   });
     // });
   }
+
+  getImageURL = filename => {
+    firebase
+      .storage()
+      .ref("images")
+      .child(filename)
+      .getDownloadURL()
+      .then(url => {
+        this.setState({
+          imageURL: url
+        });
+      });
+  };
   render() {
-    const { article, team } = this.state;
+    const { article, team, imageURL } = this.state;
 
     return (
       <div className="articleWrapper">
@@ -56,7 +72,7 @@ export class NewsArticles extends Component {
           date={article.date}
           author={article.author}
         />
-        <ArticleBody article={article} />
+        <ArticleBody article={article} imageURL={imageURL} />
       </div>
     );
   }

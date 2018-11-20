@@ -8,10 +8,15 @@ const ArticleBody = props => {
       <div
         className="articleImage"
         style={{
-          background: `url('/images/articles/${props.article.image}')`
+          background: `url('${props.imageURL}')`
         }}
       />
-      <div className="articleText">{props.article.body}</div>
+      <div
+        className="articleText"
+        dangerouslySetInnerHTML={{
+          __html: props.article.body
+        }}
+      />
     </div>
   );
 };
