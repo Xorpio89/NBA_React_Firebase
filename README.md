@@ -1,44 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🏀 NBA AI Oracle
 
-## Available Scripts
+> Real-time NBA stats with AI-powered game predictions — built with React, Firebase, and CopilotKit.
 
-In the project directory, you can run:
+![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-### `npm start`
+## What it does
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Live NBA game data with an AI sidebar that predicts outcomes, compares player stats, and answers any basketball question in natural language.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- 🏆 **Live standings** — real-time via Firebase sync
+- 📊 **Player stats** — season averages, per-game breakdowns
+- 🤖 **AI Predictions** — "Who wins Lakers vs. Celtics tonight?" → instant AI analysis
+- 🔔 **Score alerts** — Firebase push notifications on game updates
 
-### `npm test`
+## Stack
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Layer | Tech |
+|-------|------|
+| Frontend | React 18 + TypeScript |
+| Realtime | Firebase Firestore (live scores) |
+| AI | CopilotKit + Claude API |
+| Auth | Firebase Auth |
+| Styling | Tailwind CSS |
 
-### `npm run build`
+## AI Examples
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+"Compare LeBron vs Curry this season"
+→ Side-by-side stat breakdown with AI commentary
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+"Predict tonight's Celtics game"
+→ Win probability based on recent form, H2H, home/away
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+"Which teams are on a hot streak?"
+→ Last 10 games trend analysis
+```
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone https://github.com/Xorpio89/NBA_React_Firebase
+cd NBA_React_Firebase
+npm install
+cp .env.example .env.local  # Firebase + Anthropic keys
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Rebuilt as an AI-powered sports intelligence app. Original 2018 Firebase version on `legacy` branch.
