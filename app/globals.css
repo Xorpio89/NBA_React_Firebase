@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-base:        #0a0a0f;
+  --bg-surface:     #0f0f17;
+  --bg-elevated:    #14141e;
+  --bg-overlay:     #1a1a26;
+  --border-subtle:  rgba(255,255,255,0.07);
+  --border-default: rgba(255,255,255,0.12);
+  --text-primary:   #f0f0f5;
+  --text-secondary: #c0c0cc;
+  --text-muted:     #9090a8;
+  --accent:         #6366f1;
+  --accent-subtle:  rgba(99,102,241,0.12);
+  --accent-border:  rgba(99,102,241,0.30);
+  --success:        #22c55e;
+  --danger:         #ef4444;
+  --sidebar-width:  240px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 999px; }
+
+/* CopilotKit — Venice Dark */
+.copilotKitSidebar,
+.copilotKitPopup,
+.copilotKitWindow {
+  --copilot-kit-background-color:         #0f0f17;
+  --copilot-kit-primary-color:            #6366f1;
+  --copilot-kit-secondary-color:          #14141e;
+  --copilot-kit-contrast-color:           #f0f0f5;
+  --copilot-kit-secondary-contrast-color: #9090a8;
+  --copilot-kit-muted-color:              #9090a8;
+  --copilot-kit-separator-color:          rgba(255,255,255,0.07);
+  --copilot-kit-input-background-color:   #14141e;
+  --copilot-kit-shadow-md:                0 4px 24px rgba(0,0,0,0.7);
+}
