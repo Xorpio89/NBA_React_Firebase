@@ -47,3 +47,20 @@ body {
   --copilot-kit-input-background-color:   #14141e;
   --copilot-kit-shadow-md:                0 4px 24px rgba(0,0,0,0.7);
 }
+
+.team-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-decoration: none;
+  display: block;
+}
+
+.team-card:hover {
+  border-color: var(--border-default);
+  background: var(--bg-elevated);
+}
